@@ -1,6 +1,5 @@
 import React from 'react'
 export default function Weather(props) {
-    console.log(props.weather)
     return (
     <div className="max-w-sm m-2 mx-auto flex p-6 bg-dark rounded shadow-xl">
         <div className="flex-shrink-0">
