@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import SearchForm from './components/SearchForm';
+import weatherImage from './assets/images/piccky.png'
+import styles from './assets/styles/weather.module.css'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App text-center">
+      <div className={`p-4 shadow ${styles.shadowEffect}`}>
+        <div>
+          <img src={weatherImage} alt="any photo" width="400" />
+        </div>
+        <div className={`${styles.container}`}>
+          <SearchForm />
+        </div>
+      </div>
     </div>
   );
 }

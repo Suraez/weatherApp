@@ -1,0 +1,11 @@
+.container{
+    height: 100vh;
+    width: 100%;
+}
+
+.shadowEffect{
+    height: 340px;
+    width: 500px;
+    margin: 0 auto;
+    background: #7178FC !important;
+}
