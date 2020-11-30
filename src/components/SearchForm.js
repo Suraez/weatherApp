@@ -3,10 +3,10 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import styles from '../assets/styles/search.module.css'
-export default function SearchForm() {
+export default function SearchForm(props) {
   return (
-    <div className="d-flex justify-content-center m-2">
-      <form method="GET" className="d-flex">
+    <div className="d-flex justify-center m-2">
+      <form onSubmit={props.onSubmitHandler} className="d-flex">
         <div className="form-group">
           <input
             type="text"
@@ -14,6 +14,7 @@ export default function SearchForm() {
             id="q"
             className="form-control"
             placeholder="Enter City Name"
+            onChange={(e) => props.onChangeHandler(e.target.value)}
           />
         </div>
         <div className={styles.searchIcon}>
@@ -25,7 +26,6 @@ export default function SearchForm() {
           </button>
         </div>
       </form>
-      
     </div>
   );
 }
